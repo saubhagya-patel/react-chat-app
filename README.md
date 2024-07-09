@@ -6,9 +6,9 @@ This React chat application offers real-time messaging with a user-friendly inte
 
 ## Project Overview
 
-- **Developed By**: [Your Name]
-- **Date**: Started on [Start Date]
-- **Contact**: [Your Email]
+- **Developed By**: Saubhagya Patel
+- **Date**: Started on 6th July 2024
+- **Contact**: patelsaubhagya0144@gmail.com
 
 For any inquiries or feedback, please feel free to reach out via email.
 
