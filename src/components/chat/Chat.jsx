@@ -116,7 +116,6 @@ function Chat() {
             <img src={user?.avatar || "./avatar.png"} alt="avatar" />
             <div className="texts">
               <span>{user?.username}</span>
-              <p>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
 
@@ -127,7 +126,7 @@ function Chat() {
           </div>
         </div>
 
-        <div className="center">
+        <div className="center scrollbar">
           {chat?.messages?.map((message) => (
             <div
               className={

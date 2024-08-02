@@ -7,7 +7,7 @@
     flex-direction: column;
 
     .top {
-        padding: 20px;
+        padding: 15px 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -31,7 +31,7 @@
                 gap: 5px;
 
                 span {
-                    font-style: 18px;
+                    font-size: 18px;
                     font-weight: bold;
                 }
 
@@ -61,13 +61,13 @@
     }
 
     .center {
-        padding: 20px;
+        padding: 10px;
         flex: 1;
         overflow: scroll;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
         .message {
             max-width: 70%;
@@ -105,7 +105,7 @@
                 }
 
                 p {
-                    padding: 20px;
+                    padding: 10px;
                     background-color: rgba(17, 25, 40, 0.3);
                     border-radius: 10px;
                 }
@@ -118,7 +118,7 @@
     }
 
     .bottom {
-        padding: 20px;
+        padding: 10px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -144,7 +144,7 @@
             outline: none;
             border: none;
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             border-radius: 10px;
 
             &:disabled {
@@ -167,11 +167,15 @@
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
 
+            &:hover {
+                background-color: #4276fa;
+            }
+
             &:disabled {
-                background-color: #5182feb4;
+                background-color: #7697ebb4;
                 cursor: not-allowed;
             }
         }

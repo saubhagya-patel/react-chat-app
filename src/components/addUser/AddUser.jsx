@@ -78,21 +78,23 @@ function AddUser() {
 
   return (
     <>
-      <div className="addUser">
-        <form onSubmit={(e) => handleSearch(e)}>
-          <input type="text" placeholder="username" name="username" />
-          <button>Search</button>
-        </form>
+      <div className="test">
+        <div className="addUser">
+          <form onSubmit={(e) => handleSearch(e)}>
+            <input type="text" placeholder="Username" name="username" />
+            <button>Search</button>
+          </form>
 
-        {user && (
-          <div className="user">
-            <div className="detail">
-              <img src={user.avatar || "./avatar.png"} alt="avatar" />
-              <span>{user.username}</span>
+          {user && (
+            <div className="user">
+              <div className="detail">
+                <img src={user.avatar || "./avatar.png"} alt="avatar" />
+                <span>{user.username}</span>
+              </div>
+              <button onClick={() => handleAdd()}>Add User</button>
             </div>
-            <button onClick={() => handleAdd()}>Add User</button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );

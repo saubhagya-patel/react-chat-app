@@ -26,11 +26,11 @@ function Detail() {
 
   return (
     <>
-      <div className="detail">
+      <div className="detail scrollbar">
         <div className="user">
           <img src={user?.avatar || "./avatar.png"} alt="avatar" />
           <h2>{user?.username}</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
+          {/* <p>Lorem ipsum dolor sit amet.</p> */}
         </div>
 
         <div className="info">

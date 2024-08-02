@@ -3,7 +3,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
 
     .item {
         flex: 1;
@@ -20,7 +20,7 @@
             gap: 20px;
 
             input {
-                padding: 20px;
+                padding: 15px;
                 outline: none;
                 border: none;
                 background-color: rgba(17, 25, 40, 0.5);
@@ -29,7 +29,7 @@
             }
 
             label {
-                width: 100%;
+                width: 90%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -47,17 +47,27 @@
 
             button {
                 width: 100%;
-                padding: 15px;
-                border: none;
-                background-color: #1f8ef1;
+                padding: 10px;
+                border: 3px solid #0271a9;
                 color: white;
-                border-radius: 5px;
+                border-radius: 100px;
                 cursor: pointer;
                 font-weight: 500;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background-color: #0271a9;
+                }
+
+                &:active {
+                    transform: scale(0.8);
+                }
 
                 &:disabled {
                     cursor: not-allowed;
-                    background-color: #1f8ff179;
+                    border: 3px solid #223440;
+                    background: none;
+                    color: #293136;
                 }
             }
         }

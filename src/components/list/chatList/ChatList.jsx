@@ -70,7 +70,7 @@ function ChatList() {
 
   return (
     <>
-      <div className="chatList">
+      <div className="chatList scrollbar">
         <div className="search">
           <div className="searchBar">
             <img src="./search.png" alt="search" />

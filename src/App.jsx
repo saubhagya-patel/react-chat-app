@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Chat, Detail, List, Login, Notification } from "./components";
+import { Loader, Chat, Detail, List, Login, Notification } from "./components";
 import "./index.css";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./library/firebase";
@@ -21,11 +21,12 @@ function App() {
     };
   }, [fetchUserInfo]);
 
-  if (isLoading) return <div className="loading">Loading...</div>;
+  if (isLoading) return <Loader />;
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container h-screen w-screen"> */}
+      <div className="main">
         {currentUser ? (
           <>
             <List />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./login.css";
-import { toast } from "react-toastify";
+import { Slide, toast } from "react-toastify";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -44,7 +44,12 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
       console.error(err);
-      toast.error(err.message);
+      toast.error(err.message, {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     } finally {
       setLoading(false);
     }
@@ -58,17 +63,32 @@ function Login() {
     const { username, email, password } = Object.fromEntries(formData);
 
     if (!username || !email || !password) {
-      return toast.warn("Please enter inputs!");
+      return toast.warn("Please enter inputs!", {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     }
     if (!avatar.file) {
-      return toast.warn("Please upload an avatar!");
+      return toast.warn("Please upload an avatar!", {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     }
 
     const userRef = collection(db, "users");
     const q = query(userRef, where("username", "==", username));
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
-      return toast.warn("Select another username");
+      return toast.warn("Select another username", {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     }
 
     try {
@@ -92,10 +112,20 @@ function Login() {
         chats: [],
       });
 
-      toast.success("Account created! You can login now!");
+      toast.success("Account created! You can login now!", {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     } catch (err) {
       console.error(err);
-      toast.error(err.message);
+      toast.error(err.message, {
+        theme: "dark",
+        closeOnClick: true,
+        pauseOnHover: true,
+        transition: Slide,
+      });
     } finally {
       setLoading(false);
     }
@@ -105,9 +135,10 @@ function Login() {
     <>
       <div className="login">
         <div className="item">
-          <h2>Welcome back,</h2>
+          <h2 className="text-2xl">Log In</h2>
           <form onSubmit={(e) => handleLogin(e)}>
             <input type="email" placeholder="Email" name="email" />
+
             <input type="password" placeholder="Password" name="password" />
             <button type="submit" disabled={loading}>
               {loading ? "Loading" : "Sign In"}
@@ -118,7 +149,7 @@ function Login() {
         <div className="seperator"></div>
 
         <div className="item">
-          <h2>Create an Account</h2>
+          <h2 className="text-2xl">Sign Up</h2>
           <form onSubmit={(e) => handleSignup(e)}>
             <label htmlFor="file">
               <img src={avatar.url || "./avatar.png"} alt="" /> Upload an image

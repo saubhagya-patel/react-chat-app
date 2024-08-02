@@ -1,8 +1,9 @@
 .userInfo {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-betweenf;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd35;
 
     .user {
         display: flex;
@@ -23,9 +24,13 @@
         gap: 20px;
 
         img {
-            width: 20px;
-            height: 20px;
+            padding: 5px;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
+            background-color: rgba(17, 25, 40, 0.5);
+            object-fit: cover;
+            border-radius: 8px;
         }
     }
 }
